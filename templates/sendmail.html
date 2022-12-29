@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  </head>
+  <style>
+    .first{
+        margin-top:30px;
+        margin-left:500px;
+        line-height:25px;
+        font-size:20px;
+        border:5px solid green;
+        width:300px;
+        height:370px;
+        color:navy;
+        font-family: cursive;
+    }
+    h1{
+        margin-left:550px;
+        font-size:30px;
+        color:navy;
+        font-family: cursive;
+    }
+    button{
+        background-color: 	#198754;
+        color:white;
+        font-size:20px;
+        padding:5px;
+        border-radius:15px;
+        margin-left:5px;
+        margin-top:25px;
+        width:100px;
+        font-family: cursive;
+
+    }
+    form{
+        margin-left:20px;
+        padding-top:10px;
+        padding-bottom:10px;
+
+    }
+    input{
+        font-family: cursive;
+        font-size:15px;
+        border:none;
+        color:green;
+        border-bottom:3px solid navy;
+        width:250px;
+        height:30px;
+    }
+    textarea{
+        width:250px;
+        height:100px;
+        border:3px solid navy;
+        margin-top:15px;
+        color:green;
+        font-size:20px;
+    }
+  </style>
+<body>
+    <h1>Email System</h1>
+
+<div class="first">
+    <form method="POST">
+        {% csrf_token %} 
+        <label>To</label><br>
+        <input type="email" name="email"><br>
+        <label>Subject</label><br>
+        <input type="text" name="subject"><br>
+        <label>Compose</label><br>
+        <textarea name="message">
+        </textarea><br>
+        <button type="submit">Send</button>
+    </form>
+</div>
+</body>
+</html>
